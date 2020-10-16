@@ -16,7 +16,7 @@ from sklearn.svm import SVR
 from sklearn.model_selection import train_test_split
 import yfinance as yf
 
-tickers = ["NIO"]
+tickers = ["QQQ"]
 
 df = yf.download(tickers, start = "2010-03-20", end = "2023-01-01")
 
@@ -29,7 +29,7 @@ print(df.head())
 
 # program a variable for predicting "n" days out in the future
 
-n= 3  # this is adjustable
+n= 5  # this is adjustable
 forcast_out = n
 
 # create another column (the target or denpendent variable ) shifted 'n; units up

@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct  3 22:12:08 2020
 
-@author: htian
-"""
 
 
 import pandas as pd
@@ -37,7 +32,7 @@ raw_df = raw_df.iloc[1:,:]
 # Read the head of the data table
 print(raw_df.head(10))
 
-
+# plot the number of constituents in each sector
 sectors = raw_df.groupby('GICS Sector').count().iloc[:,0].sort_values()
 sectors.plot(kind='bar')
 plt.ylabel('Number of Constituents')
